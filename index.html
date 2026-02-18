@@ -6,10 +6,10 @@
     <title>Chronos Gym - Menú Oficial</title>
     <style>
         :root {
-            --bg-color: #000000; /* Negro */
-            --accent-color: #ff0000; /* Rojo */
-            --text-color: #ffffff; /* Blanco */
-            --card-bg: #111111; /* Negro suave para tarjetas */
+            --bg-color: #000000;
+            --accent-color: #ff0000;
+            --text-color: #ffffff;
+            --card-bg: #111111;
             --border-color: #333333;
         }
 
@@ -24,45 +24,26 @@
 
         .header {
             text-align: center;
-            padding: 50px 20px;
-            background-color: var(--bg-color);
+            padding: 40px 20px;
             border-bottom: 4px solid var(--accent-color);
         }
 
-        .header h1 {
-            margin: 0;
-            font-size: 32px;
-            color: var(--text-color);
-            text-transform: uppercase;
-        }
+        .header h1 { margin: 0; font-size: 28px; text-transform: uppercase; }
+        .header p { margin: 5px 0 0; font-size: 14px; color: var(--accent-color); font-weight: bold; }
 
-        .header p {
-            margin: 5px 0 0;
-            font-size: 14px;
-            color: var(--accent-color);
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        .accordion-container {
-            width: 95%;
-            max-width: 600px;
-            margin: 20px auto;
-        }
+        .accordion-container { width: 95%; max-width: 600px; margin: 20px auto; }
 
         .category-btn {
             background-color: var(--card-bg);
             color: var(--text-color);
             cursor: pointer;
-            padding: 22px;
+            padding: 20px;
             width: 100%;
             border: 1px solid var(--border-color);
             text-align: left;
-            outline: none;
-            font-size: 17px;
+            font-size: 16px;
             font-weight: 900;
-            transition: 0.3s;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -70,54 +51,21 @@
             border-radius: 2px;
         }
 
-        .category-btn.active {
-            background-color: var(--accent-color);
-            color: #ffffff;
-            border-color: var(--accent-color);
-        }
+        .category-btn.active { background-color: var(--accent-color); border-color: var(--accent-color); }
 
-        .panel {
-            padding: 0 10px;
-            background-color: var(--bg-color);
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
+        .panel { padding: 0 10px; background-color: var(--bg-color); max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
 
         .product-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 10px;
+            padding: 12px 10px;
             border-bottom: 1px solid var(--border-color);
         }
 
-        .product-info {
-            flex: 1;
-        }
-
-        .product-name {
-            font-size: 15px;
-            font-weight: 400;
-            display: block;
-            margin-bottom: 4px;
-            text-transform: uppercase;
-        }
-
-        .product-price {
-            font-size: 16px;
-            color: var(--accent-color);
-            font-weight: bold;
-        }
-
-        .active .product-price {
-            color: #ffffff; /* En el panel activo el precio cambia a blanco */
-        }
-
-        .icon {
-            font-size: 20px;
-            font-weight: bold;
-        }
+        .product-name { font-size: 14px; text-transform: uppercase; flex: 1; padding-right: 10px; }
+        .product-price { font-size: 15px; color: var(--accent-color); font-weight: bold; white-space: nowrap; }
+        .active .product-price { color: #ffffff; }
     </style>
 </head>
 <body>
@@ -129,69 +77,104 @@
 
     <div class="accordion-container">
         
-        <button class="category-btn">Batidos proteicos <span class="icon">+</span></button>
+        <button class="category-btn">Combos <span>+</span></button>
         <div class="panel">
-            <div class="product-item"><div class="product-info"><span class="product-name">Chocolate</span></div><span class="product-price">$10.000</span></div>
-            <div class="product-item"><div class="product-info"><span class="product-name">Vainilla</span></div><span class="product-price">$10.000</span></div>
-            <div class="product-item"><div class="product-info"><span class="product-name">Pai de limón</span></div><span class="product-price">$10.000</span></div>
-            <div class="product-item"><div class="product-info"><span class="product-name">Milo</span></div><span class="product-price">$12.000</span></div>
-            <div class="product-item"><div class="product-info"><span class="product-name">Granizado fruit ponch con Creatina</span></div><span class="product-price">$14.000</span></div>
+            <div class="product-item"><span>Galletas o torta x 6</span><span class="product-price">$21.000</span></div>
+            <div class="product-item"><span>Galletas o torta x12</span><span class="product-price">$36.000</span></div>
+            <div class="product-item"><span>Galletas o torta x24</span><span class="product-price">$60.000</span></div>
+            <div class="product-item"><span>Ajonjolí x24</span><span class="product-price">$36.000</span></div>
+            <div class="product-item"><span>Deditos x12</span><span class="product-price">$54.000</span></div>
+            <div class="product-item"><span>Empanadas x12</span><span class="product-price">$36.000</span></div>
+            <div class="product-item"><span>Batido + Torta o Galleta</span><span class="product-price">$13.000</span></div>
+            <div class="product-item"><span>Batido + Dedito</span><span class="product-price">$14.000</span></div>
+            <div class="product-item"><span>Batido + Empanada</span><span class="product-price">$13.000</span></div>
         </div>
 
-        <button class="category-btn">Smoothies <span class="icon">+</span></button>
+        <button class="category-btn">Batidos proteicos <span>+</span></button>
         <div class="panel">
-            <div class="product-item"><div class="product-info"><span class="product-name">Batido verde</span></div><span class="product-price">$12.000</span></div>
-            <div class="product-item"><div class="product-info"><span class="product-name">Proteico de mango</span></div><span class="product-price">$12.000</span></div>
-            <div class="product-item"><div class="product-info"><span class="product-name">Proteico de frutos rojos</span></div><span class="product-price">$14.000</span></div>
+            <div class="product-item"><span>Chocolate</span><span class="product-price">$10.000</span></div>
+            <div class="product-item"><span>Vainilla</span><span class="product-price">$10.000</span></div>
+            <div class="product-item"><span>Pai de limón</span><span class="product-price">$10.000</span></div>
+            <div class="product-item"><span>Milo</span><span class="product-price">$12.000</span></div>
+            <div class="product-item"><span>Granizado Fruit Ponch + Creatina</span><span class="product-price">$14.000</span></div>
         </div>
 
-        <button class="category-btn">Snacks <span class="icon">+</span></button>
+        <button class="category-btn">Smoothies <span>+</span></button>
         <div class="panel">
-            <div class="product-item"><div class="product-info"><span class="product-name">Galletas / Torta</span></div><span class="product-price">$4.000</span></div>
-            <div class="product-item"><div class="product-info"><span class="product-name">Jar Cake Fit</span></div><span class="product-price">$14.000</span></div>
-            <div class="product-item"><div class="product-info"><span class="product-name">Barra de proteína (Varios sabores)</span></div><span class="product-price">$12.000</span></div>
+            <div class="product-item"><span>Batido verde</span><span class="product-price">$12.000</span></div>
+            <div class="product-item"><span>Proteico de mango</span><span class="product-price">$12.000</span></div>
+            <div class="product-item"><span>Proteico de frutos rojos</span><span class="product-price">$14.000</span></div>
         </div>
 
-        <button class="category-btn">Horneados <span class="icon">+</span></button>
+        <button class="category-btn">Horneados <span>+</span></button>
         <div class="panel">
-            <div class="product-item"><div class="product-info"><span class="product-name">Dedito integral queso / bocadillo</span></div><span class="product-price">$5.000</span></div>
-            <div class="product-item"><div class="product-info"><span class="product-name">Empanadas de yuca o maíz</span></div><span class="product-price">$3.500</span></div>
+            <div class="product-item"><span>Dedito integral de queso</span><span class="product-price">$5.000</span></div>
+            <div class="product-item"><span>Dedito integral queso con bocadillo</span><span class="product-price">$5.000</span></div>
+            <div class="product-item"><span>Empanadas yuca (Carne/Pollo)</span><span class="product-price">$3.500</span></div>
+            <div class="product-item"><span>Empanadas maíz (Carne/Pollo)</span><span class="product-price">$3.500</span></div>
         </div>
 
-        <button class="category-btn">Combos <span class="icon">+</span></button>
+        <button class="category-btn">Snacks <span>+</span></button>
         <div class="panel">
-            <div class="product-item"><div class="product-info"><span class="product-name">Galletas/Torta x12</span></div><span class="product-price">$36.000</span></div>
-            <div class="product-item"><div class="product-info"><span class="product-name">Batido + Dedito</span></div><span class="product-price">$14.000</span></div>
+            <div class="product-item"><span>Galletas</span><span class="product-price">$4.000</span></div>
+            <div class="product-item"><span>Torta</span><span class="product-price">$4.000</span></div>
+            <div class="product-item"><span>Barrita de ajonjolí</span><span class="product-price">$2.000</span></div>
+            <div class="product-item"><span>Barra mix</span><span class="product-price">$4.000</span></div>
+            <div class="product-item"><span>Turrón de yacon</span><span class="product-price">$1.500</span></div>
+            <div class="product-item"><span>Barra de proteína (Fresa/Choc/Vain)</span><span class="product-price">$12.000</span></div>
+            <div class="product-item"><span>Jar Cake Fit</span><span class="product-price">$14.000</span></div>
         </div>
 
-        <button class="category-btn">Suplementos <span class="icon">+</span></button>
+        <button class="category-btn">Bebidas <span>+</span></button>
         <div class="panel">
-            <div class="product-item"><div class="product-info"><span class="product-name">Warlab Creatina x100 Serv</span></div><span class="product-price">$90.000</span></div>
-            <div class="product-item"><div class="product-info"><span class="product-name">Proteína Whey Elite 2lb</span></div><span class="product-price">$148.000</span></div>
+            <div class="product-item"><span>Agua 600ml</span><span class="product-price">$2.000</span></div>
+            <div class="product-item"><span>Agua 1 Litro</span><span class="product-price">$3.000</span></div>
+            <div class="product-item"><span>Agua saborizada</span><span class="product-price">$2.500</span></div>
+            <div class="product-item"><span>Gatorade sin azúcar</span><span class="product-price">$3.000</span></div>
+            <div class="product-item"><span>Vaso de tea pro</span><span class="product-price">$3.500</span></div>
+            <div class="product-item"><span>Capuchino de colageno</span><span class="product-price">$4.000</span></div>
         </div>
 
-        <button class="category-btn">Complementos <span class="icon">+</span></button>
+        <button class="category-btn">Suplementos <span>+</span></button>
         <div class="panel">
-            <div class="product-item"><div class="product-info"><span class="product-name">Callejas</span></div><span class="product-price">$16.000</span></div>
-            <div class="product-item"><div class="product-info"><span class="product-name">Vendas elásticas rodilla</span></div><span class="product-price">$65.000</span></div>
+            <div class="product-item"><span>Sachet de proteína</span><span class="product-price">$9.000</span></div>
+            <div class="product-item"><span>Sachet de pre entreno</span><span class="product-price">$5.000</span></div>
+            <div class="product-item"><span>Sachet de Creatina</span><span class="product-price">$5.000</span></div>
+            <div class="product-item"><span>Sachet de colageno</span><span class="product-price">$4.000</span></div>
+            <div class="product-item"><span>Warlab Creatina 100 Serv</span><span class="product-price">$90.000</span></div>
+            <div class="product-item"><span>Warlab Creatina 30 Serv</span><span class="product-price">$55.000</span></div>
+            <div class="product-item"><span>Healthy Sport 100 Serv</span><span class="product-price">$125.000</span></div>
+            <div class="product-item"><span>Healthy Sport 50 Serv</span><span class="product-price">$75.000</span></div>
+            <div class="product-item"><span>Proteína Whey Elite 2lb</span><span class="product-price">$148.000</span></div>
+            <div class="product-item"><span>Colageno Pote</span><span class="product-price">$100.000</span></div>
+            <div class="product-item"><span>Téa Pro Pote</span><span class="product-price">$67.000</span></div>
+            <div class="product-item"><span>War Gainer</span><span class="product-price">$75.000</span></div>
+            <div class="product-item"><span>Cafeína</span><span class="product-price">$68.000</span></div>
+            <div class="product-item"><span>Yohimbina</span><span class="product-price">$110.000</span></div>
+            <div class="product-item"><span>Glutamina</span><span class="product-price">$88.000</span></div>
+            <div class="product-item"><span>Vitamina C en polvo</span><span class="product-price">$68.000</span></div>
+        </div>
+
+        <button class="category-btn">Complementos deportivos <span>+</span></button>
+        <div class="panel">
+            <div class="product-item"><span>Calleras</span><span class="product-price">$16.000</span></div>
+            <div class="product-item"><span>Vendas elásticas para rodilla</span><span class="product-price">$65.000</span></div>
         </div>
 
     </div>
 
     <script>
         var acc = document.getElementsByClassName("category-btn");
-        var i;
-
-        for (i = 0; i < acc.length; i++) {
+        for (var i = 0; i < acc.length; i++) {
             acc[i].addEventListener("click", function() {
                 this.classList.toggle("active");
                 var panel = this.nextElementSibling;
                 if (panel.style.maxHeight) {
                     panel.style.maxHeight = null;
-                    this.querySelector('.icon').innerText = "+";
+                    this.querySelector('span').innerText = "+";
                 } else {
                     panel.style.maxHeight = panel.scrollHeight + "px";
-                    this.querySelector('.icon').innerText = "-";
+                    this.querySelector('span').innerText = "-";
                 }
             });
         }
